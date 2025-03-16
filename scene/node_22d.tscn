@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://iylyeq2yt0g1"]
+
+[ext_resource type="Script" path="res://script/node_2d.gd" id="1_ijn8a"]
+[ext_resource type="Texture2D" uid="uid://svrrxvh4fdkr" path="res://image/New Piskel-2.png (1).png" id="2_1r0h7"]
+[ext_resource type="Texture2D" uid="uid://dhteefsu6ifw8" path="res://image/New Piskel-3.png.png" id="3_bq11v"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ijn8a")
+
+[node name="NewPiskel-2_png(1)" type="Sprite2D" parent="."]
+position = Vector2(500, 254)
+texture = ExtResource("2_1r0h7")
+
+[node name="NewPiskel-3_png" type="Sprite2D" parent="."]
+position = Vector2(817, 253)
+scale = Vector2(0.384943, 0.397727)
+texture = ExtResource("3_bq11v")
+
+[node name="but_on" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.623529)
+offset_left = 716.0
+offset_top = 176.0
+offset_right = 856.0
+offset_bottom = 301.0
+
+[connection signal="pressed" from="but_on" to="." method="_on_button_pressed"]

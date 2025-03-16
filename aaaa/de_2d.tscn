@@ -1,0 +1,81 @@
+[gd_scene load_steps=14 format=3 uid="uid://c1goa8i11m6i6"]
+
+[ext_resource type="Texture2D" uid="uid://oxd5bnkf3qou" path="res://image/logo/logo.png" id="1_t1h1r"]
+[ext_resource type="Texture2D" uid="uid://7ps8yq7mv0p5" path="res://image/logo/uatex .png" id="2_86tym"]
+[ext_resource type="Texture2D" uid="uid://dkm6gv84reew6" path="res://image/window/Layer 1_window_sprite3.png" id="3_k57i5"]
+[ext_resource type="Texture2D" uid="uid://lupp8vq44ebb" path="res://image/window/Layer 1_window_sprite2.png" id="4_vucof"]
+[ext_resource type="Texture2D" uid="uid://sakj8vsa8bhw" path="res://icon.svg" id="5_gaggm"]
+[ext_resource type="Texture2D" uid="uid://c1u0xk3km516c" path="res://image/enemy.png" id="6_5nxhc"]
+[ext_resource type="Texture2D" uid="uid://jkd2e2h5g7ei" path="res://image/logo/Layer 1_sprite_logo1.png" id="7_dcpw7"]
+[ext_resource type="Texture2D" uid="uid://dorfjcgj7o62p" path="res://image/logo/Layer 1_sprite_logo4.png" id="8_684kv"]
+[ext_resource type="Texture2D" uid="uid://c0ognjxp52v8d" path="res://image/logo/Layer 1_sprite_logo3.png" id="9_h64yc"]
+[ext_resource type="Texture2D" uid="uid://km3xi5hf7pvv" path="res://image/im.png" id="10_58nnp"]
+[ext_resource type="Texture2D" uid="uid://bpk8el3r0y2hm" path="res://image/n.png" id="11_4mgwa"]
+[ext_resource type="Texture2D" uid="uid://didxm2hmr0y75" path="res://image/mygame/red_eyes_yellow_crown/Layer 1_sprite_reyc6.png" id="12_uv7r2"]
+[ext_resource type="Texture2D" uid="uid://0t3b622drxp1" path="res://image/mygame/red_eyes_yellow_crown/Layer 1_sprite_reyc5.png" id="13_cipm2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Logo_" type="Sprite2D" parent="."]
+position = Vector2(346, 162)
+scale = Vector2(10.5625, 7.48437)
+texture = ExtResource("1_t1h1r")
+
+[node name="Uatex" type="Sprite2D" parent="."]
+position = Vector2(766, 494)
+scale = Vector2(12.4865, 10.1058)
+texture = ExtResource("2_86tym")
+
+[node name="Layer1WindowSprite3" type="Sprite2D" parent="."]
+position = Vector2(365, 409)
+scale = Vector2(3.23438, 3.625)
+texture = ExtResource("3_k57i5")
+
+[node name="Layer1WindowSprite2" type="Sprite2D" parent="."]
+position = Vector2(130, 94)
+scale = Vector2(2.875, 3.20313)
+texture = ExtResource("4_vucof")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(659, 259)
+scale = Vector2(2.4375, 2.10938)
+texture = ExtResource("5_gaggm")
+
+[node name="Enemy" type="Sprite2D" parent="."]
+position = Vector2(620.5, 232)
+scale = Vector2(4.60156, 3.35938)
+texture = ExtResource("6_5nxhc")
+
+[node name="Layer1SpriteLogo1" type="Sprite2D" parent="."]
+position = Vector2(1149, 171)
+scale = Vector2(14.0625, 11.3125)
+texture = ExtResource("7_dcpw7")
+
+[node name="Layer1SpriteLogo4" type="Sprite2D" parent="."]
+position = Vector2(390, 453)
+scale = Vector2(7.5625, 8.125)
+texture = ExtResource("8_684kv")
+
+[node name="Layer1SpriteLogo3" type="Sprite2D" parent="."]
+position = Vector2(218, 228)
+texture = ExtResource("9_h64yc")
+
+[node name="Im" type="Sprite2D" parent="."]
+position = Vector2(2103, 388)
+scale = Vector2(3.16764, 1.81319)
+texture = ExtResource("10_58nnp")
+
+[node name="N" type="Sprite2D" parent="."]
+position = Vector2(2336, 565.5)
+scale = Vector2(4, 3.40625)
+texture = ExtResource("11_4mgwa")
+
+[node name="Layer1SpriteReyc6" type="Sprite2D" parent="."]
+position = Vector2(2357.5, 569)
+scale = Vector2(3.64063, 3.59375)
+texture = ExtResource("12_uv7r2")
+
+[node name="Layer1SpriteReyc5" type="Sprite2D" parent="."]
+position = Vector2(2035, 785)
+scale = Vector2(3.49219, 3.40625)
+texture = ExtResource("13_cipm2")

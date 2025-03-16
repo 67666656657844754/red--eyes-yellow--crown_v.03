@@ -1,0 +1,9 @@
+res://PLAYER/sript/character_body_2d.gd
+
+func _on_mmenu_pressed() -> void:
+	TrannsitionScreen. transition()
+	await TrannsitionScreen.on_transition_finished
+	get_tree().change_scene_to_file("res://scene/menu_2d.tscn")
+	
+	mmenu, save, loadsave, return
+	

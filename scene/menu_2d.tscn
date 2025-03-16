@@ -1,0 +1,237 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfe0vkjq11vaq"]
+
+[ext_resource type="Texture2D" uid="uid://ddniy3vdvsuxo" path="res://image/redeysyeallkron.png" id="1_4uc6d"]
+[ext_resource type="Script" path="res://script/menu_2d.gd" id="1_7hm03"]
+[ext_resource type="Script" path="res://languages/seting.gd" id="3_4jlun"]
+[ext_resource type="Texture2D" uid="uid://douhd2gnvjbht" path="res://languages/image_lang/Layer 1_sprite_en_uk1.png" id="3_7bqrw"]
+[ext_resource type="Texture2D" uid="uid://bl2kqtave7h6r" path="res://languages/image_lang/Layer 1_sprite_en_uk2.png" id="4_mbelh"]
+
+[sub_resource type="Animation" id="Animation_n8km1"]
+resource_name = "Exit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(79, -1175), Vector2(234, 56)]
+}
+
+[sub_resource type="Animation" id="Animation_rm015"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_03lw8"]
+resource_name = "nExit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(234, 56), Vector2(79, -1175)]
+}
+
+[sub_resource type="Animation" id="Animation_rkfvx"]
+resource_name = "seting"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("seting:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8, -621), Vector2(4, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_o1qka"]
+resource_name = "seting_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("seting:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 6), Vector2(12, -586)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_88y3x"]
+_data = {
+"Exit": SubResource("Animation_n8km1"),
+"RESET": SubResource("Animation_rm015"),
+"nExit": SubResource("Animation_03lw8"),
+"seting": SubResource("Animation_rkfvx"),
+"seting_close": SubResource("Animation_o1qka")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7hm03")
+
+[node name="Redeysyeallkron" type="Sprite2D" parent="."]
+position = Vector2(591.188, 323)
+scale = Vector2(2.32167, 2.38376)
+texture = ExtResource("1_4uc6d")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 245.0
+offset_bottom = 646.0
+
+[node name="play" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 129.0
+offset_right = 212.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 34
+text = "play"
+
+[node name="noname_but" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 575.0
+offset_right = 240.0
+offset_bottom = 645.0
+text = "^"
+
+[node name="uatexinfo" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 456.0
+offset_right = 244.0
+offset_bottom = 541.0
+theme_override_font_sizes/font_size = 30
+text = "info"
+
+[node name="seting" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 245.0
+offset_right = 213.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 30
+text = "setting"
+
+[node name="exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 349.0
+offset_right = 182.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 30
+text = "exit"
+
+[node name="seting" type="Panel" parent="."]
+offset_left = -1311.0
+offset_top = -664.0
+offset_right = -129.0
+offset_bottom = -167.0
+script = ExtResource("3_4jlun")
+
+[node name="close_set" type="Button" parent="seting"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 16.0
+offset_right = 684.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 34
+text = "close setting"
+
+[node name="en" type="Button" parent="seting"]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 144.0
+offset_right = 591.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 45
+text = "English"
+icon = ExtResource("3_7bqrw")
+
+[node name="uk" type="Button" parent="seting"]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 275.0
+offset_right = 594.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 45
+text = "Україска"
+icon = ExtResource("4_mbelh")
+
+[node name="a" type="Label" parent="seting"]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 161.0
+offset_right = 982.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 2
+
+[node name="a2" type="Label" parent="seting"]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 290.0
+offset_right = 974.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_88y3x")
+}
+
+[node name="Exit" type="Panel" parent="."]
+offset_left = 79.0
+offset_top = -1175.0
+offset_right = 858.0
+offset_bottom = -727.0
+
+[node name="Yes" type="Button" parent="Exit"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 139.0
+offset_right = 324.0
+offset_bottom = 287.0
+theme_override_font_sizes/font_size = 100
+text = "Yes"
+
+[node name="No" type="Button" parent="Exit"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 138.0
+offset_right = 721.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 100
+text = "No"
+
+[node name="Menu" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(983, 723)
+bus = &"menu"
+
+[connection signal="pressed" from="Panel/play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/noname_but" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/uatexinfo" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/seting" to="." method="_on_seting_pressed"]
+[connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="seting/close_set" to="." method="_on_close_set_pressed"]
+[connection signal="pressed" from="seting/en" to="seting" method="_on_en_pressed"]
+[connection signal="pressed" from="seting/uk" to="seting" method="_on_uk_pressed"]
+[connection signal="pressed" from="Exit/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Exit/No" to="." method="_on_no_pressed"]

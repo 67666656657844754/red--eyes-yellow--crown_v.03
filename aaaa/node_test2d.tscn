@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://424afq4nqq2n"]
+
+[ext_resource type="Texture2D" uid="uid://b2ihxuosasxtv" path="res://image/New Piskel (4).png" id="1_cxcuj"]
+[ext_resource type="Texture2D" uid="uid://dkm6gv84reew6" path="res://image/window/Layer 1_window_sprite3.png" id="2_oy7ni"]
+[ext_resource type="Texture2D" uid="uid://c6ltcx8liqvso" path="res://image/New Piskel (3)/sprite_sprite0.png" id="3_wqn3i"]
+[ext_resource type="Texture2D" uid="uid://ech2detov6l8" path="res://image/New Piskel (3)/sprite_sprite3.png" id="4_b3eg3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="."]
+position = Vector2(696, 535)
+scale = Vector2(3.09375, 4.41797)
+texture = ExtResource("1_cxcuj")
+
+[node name="Layer1WindowSprite3" type="Sprite2D" parent="."]
+position = Vector2(348.5, 226.5)
+scale = Vector2(7.79688, 8.95313)
+texture = ExtResource("2_oy7ni")
+
+[node name="SpriteSprite0" type="Sprite2D" parent="."]
+position = Vector2(603, 591)
+scale = Vector2(9.36719, 1.89063)
+texture = ExtResource("3_wqn3i")
+
+[node name="SpriteSprite3" type="Sprite2D" parent="."]
+position = Vector2(801, 392)
+texture = ExtResource("4_b3eg3")

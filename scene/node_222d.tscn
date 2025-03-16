@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://buc6t4n11323g"]
+
+[ext_resource type="Texture2D" uid="uid://cxdef6644ve5m" path="res://image/New Piskel-1.png (1).png" id="1_84kmt"]
+[ext_resource type="Texture2D" uid="uid://rrgef1dafemb" path="res://image/New Piskel-5.png.png" id="2_ayftq"]
+[ext_resource type="Texture2D" uid="uid://ddniy3vdvsuxo" path="res://image/redeysyeallkron.png" id="3_u3sqa"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1145.0
+offset_bottom = 656.0
+color = Color(0.972549, 0, 0, 1)
+
+[node name="NewPiskel-1_png(1)" type="Sprite2D" parent="."]
+position = Vector2(163.25, 268.75)
+scale = Vector2(0.297585, 0.273437)
+texture = ExtResource("1_84kmt")
+
+[node name="NewPiskel-5_png" type="Sprite2D" parent="."]
+position = Vector2(203, 150)
+texture = ExtResource("2_ayftq")
+
+[node name="Redeysyeallkron" type="Sprite2D" parent="."]
+position = Vector2(151, 450)
+scale = Vector2(0.313112, 0.440959)
+texture = ExtResource("3_u3sqa")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 303.0
+offset_top = 229.0
+offset_right = 2280.0
+offset_bottom = 304.0
+text = "ytyyyyytgbnmmmmmmmmkkkkkkkkkkkkkkkkkkjhgygtffrdeeeeeeeew333333edrfgbh
+ytyyyyytgbnmmmmmmmmkkkkkkkkkkkkkkkkkkjhgygtffrdeeeeeeeew333333edrfgbh
+ytyyyyytgbnmmmmmmmmkkkkkkkkkkkkkkkkkkjhgygtffrdeeeeeeeew333333edrfgbhytyyyyytgbnmmmmmmmmkkkkkkkkkkkkkkkkkkjhgygtffrdeeeeeeeew333333edrfgbhytyyyyytgbnmmmmmmmmkkkkkkkkkkkkkkkkkkjhgygtffrdeeeeeeeew333333edrfgbh"
+
+[node name="game" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.501961)
+offset_left = 70.0
+offset_top = 382.0
+offset_right = 242.0
+offset_bottom = 522.0

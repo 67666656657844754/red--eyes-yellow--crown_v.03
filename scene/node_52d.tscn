@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bnvj3m73tngr8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 272.0
+offset_right = 929.0
+offset_bottom = 632.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 323.0
+offset_top = 63.0
+offset_right = 853.0
+offset_bottom = 239.0
+text = "0000"

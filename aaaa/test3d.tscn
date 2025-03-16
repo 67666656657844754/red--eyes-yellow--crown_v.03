@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsdx33ip47y51"]
+
+[sub_resource type="Environment" id="Environment_g26up"]
+background_mode = 1
+background_color = Color(0.564706, 0, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+editor_description = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000427663, 0, 0.0944062)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g26up")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]

@@ -1,0 +1,288 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyph7w3korhjd"]
+
+[ext_resource type="Script" path="res://PLAYER/sript/character_body_2d.gd" id="1_jp2id"]
+[ext_resource type="SpriteFrames" uid="uid://cvirsondeaurx" path="res://PLAYER/playar animation.tres" id="2_2y11r"]
+
+[sub_resource type="Animation" id="Animation_fnkrp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuuu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(258, -662)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("y-n:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-313, 21)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("eror:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-369, -240)]
+}
+
+[sub_resource type="Animation" id="Animation_fy6ab"]
+resource_name = "menuu"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuuu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(258, -662), Vector2(258, -31)]
+}
+
+[sub_resource type="Animation" id="Animation_oxmre"]
+resource_name = "menuu_2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuuu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(258, -31), Vector2(258, -662)]
+}
+
+[sub_resource type="Animation" id="Animation_ankku"]
+resource_name = "s"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("eror:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-369, -240), Vector2(395, 192)]
+}
+
+[sub_resource type="Animation" id="Animation_qkwtk"]
+resource_name = "y-n"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("y-n:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-648, 125), Vector2(473, 158)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qnjs2"]
+_data = {
+"RESET": SubResource("Animation_fnkrp"),
+"menuu": SubResource("Animation_fy6ab"),
+"menuu_2": SubResource("Animation_oxmre"),
+"s": SubResource("Animation_ankku"),
+"y-n": SubResource("Animation_qkwtk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn28e"]
+size = Vector2(363, 415)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_jp2id")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qnjs2")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(532, 189)
+sprite_frames = ExtResource("2_2y11r")
+animation = &"pl_an"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(468, 238.5)
+shape = SubResource("RectangleShape2D_fn28e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 305)
+process_callback = 0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 15.0
+offset_top = -15.0
+offset_right = 196.0
+offset_bottom = 37.0
+text = " menu"
+
+[node name="Menuuu" type="Panel" parent="."]
+offset_left = 258.0
+offset_top = -662.0
+offset_right = 700.0
+offset_bottom = -56.0
+
+[node name="mmenu" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 24.0
+offset_right = 357.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 25
+text = "menu"
+
+[node name="return" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 120.0
+offset_right = 380.0
+offset_bottom = 164.0
+theme_override_font_sizes/font_size = 25
+text = "Return"
+
+[node name="save" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 255.0
+offset_right = 391.0
+offset_bottom = 362.0
+theme_override_font_sizes/font_size = 25
+text = "save"
+
+[node name="loadsave" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 255.0
+offset_right = 192.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 25
+text = "load"
+
+[node name="exit" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 539.0
+offset_right = 332.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 34
+text = "exit"
+
+[node name="keyboart" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 413.0
+offset_right = 345.0
+offset_bottom = 469.0
+theme_override_font_sizes/font_size = 34
+text = "How to Play"
+
+[node name="setting" type="Button" parent="Menuuu"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 183.0
+offset_right = 367.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 20
+text = "setting"
+
+[node name="y-n" type="Panel" parent="."]
+offset_left = -313.0
+offset_top = 21.0
+offset_right = -148.0
+offset_bottom = 102.0
+
+[node name="yeees" type="Button" parent="y-n"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 59.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+text = "Y"
+
+[node name="nouou" type="Button" parent="y-n"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -1.0
+offset_right = 165.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 50
+text = "N"
+
+[node name="Label" type="Label" parent="y-n"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 8.0
+offset_right = 129.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 50
+text = "/"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 737.0
+offset_top = 21.0
+offset_right = 1092.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 20
+text = "sorry ,the game is still in development"
+
+[node name="eror" type="Panel" parent="."]
+offset_left = -369.0
+offset_top = -240.0
+offset_right = -207.0
+offset_bottom = -175.0
+
+[node name="Label" type="Label" parent="eror"]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 36.0
+text = "error"
+
+[node name="Button" type="Button" parent="eror"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 28.0
+offset_right = 133.0
+offset_bottom = 59.0
+text = "ok"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menuuu/mmenu" to="." method="_on_mmenu_pressed"]
+[connection signal="pressed" from="Menuuu/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Menuuu/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Menuuu/loadsave" to="." method="_on_loadsave_pressed"]
+[connection signal="pressed" from="Menuuu/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Menuuu/keyboart" to="." method="_on_keyboart_pressed"]
+[connection signal="pressed" from="Menuuu/setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="y-n/yeees" to="." method="_on_yeees_pressed"]
+[connection signal="pressed" from="y-n/nouou" to="." method="_on_nouou_pressed"]
+[connection signal="pressed" from="eror/Button" to="." method="_on_butto7n_pressed"]

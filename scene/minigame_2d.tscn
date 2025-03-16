@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://daudq1rgvlb8c"]
+
+[ext_resource type="Texture2D" uid="uid://sakj8vsa8bhw" path="res://icon.svg" id="1_n21ns"]
+[ext_resource type="Texture2D" uid="uid://b4g5roumyed1u" path="res://image/New Piskel (2).png" id="2_uriut"]
+[ext_resource type="PackedScene" uid="uid://bglsvw4s8rwrc" path="res://scene/godot.tscn" id="3_unugx"]
+[ext_resource type="Texture2D" uid="uid://dufj3y5k6qij3" path="res://image/New Piskel (1).png" id="4_hi6ub"]
+[ext_resource type="Script" path="res://scene/area_2d.gd" id="5_qovlx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y68b"]
+size = Vector2(13758, 159)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qh0wr"]
+size = Vector2(942, 2768.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkxd0"]
+size = Vector2(151, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evddl"]
+size = Vector2(402, 497.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2705.5, 523)
+scale = Vector2(107.914, 1)
+texture = ExtResource("1_n21ns")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2620, 521.5)
+shape = SubResource("RectangleShape2D_0y68b")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2700, -911)
+shape = SubResource("RectangleShape2D_qh0wr")
+metadata/_edit_group_ = true
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(358, 145)
+mass = 0.98
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(705, -1121)
+texture = ExtResource("2_uriut")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(605, -1144)
+shape = SubResource("RectangleShape2D_hkxd0")
+metadata/_edit_group_ = true
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(-428, 427)
+mass = 0.98
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+position = Vector2(705, -1121)
+texture = ExtResource("2_uriut")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(605.5, -1141.5)
+shape = SubResource("RectangleShape2D_hkxd0")
+metadata/_edit_group_ = true
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(2336, -149)
+mass = 0.98
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+position = Vector2(705, -1121)
+texture = ExtResource("2_uriut")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2(605.5, -1141.5)
+shape = SubResource("RectangleShape2D_hkxd0")
+metadata/_edit_group_ = true
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(6589, -29219)
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D4"]
+position = Vector2(705, -1121)
+texture = ExtResource("2_uriut")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+position = Vector2(605.5, -1141.5)
+shape = SubResource("RectangleShape2D_hkxd0")
+metadata/_edit_group_ = true
+
+[node name="Godot" parent="." instance=ExtResource("3_unugx")]
+position = Vector2(253, 335)
+collision_layer = 129
+collision_mask = 129
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 129
+collision_mask = 129
+script = ExtResource("5_qovlx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9158, 188.25)
+shape = SubResource("RectangleShape2D_evddl")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+position = Vector2(3163, 3621)
+scale = Vector2(86.6765, 63.4118)
+texture = ExtResource("4_hi6ub")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

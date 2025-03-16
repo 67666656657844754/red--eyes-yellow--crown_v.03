@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdbh3gys3kwnq"]
+
+[ext_resource type="Texture2D" uid="uid://ddniy3vdvsuxo" path="res://image/redeysyeallkron.png" id="1_u8a5t"]
+[ext_resource type="Script" path="res://script/uatex.gd" id="1_vuqri"]
+[ext_resource type="Texture2D" uid="uid://cxh54218rg1bo" path="res://advertisting/telegram.png.png" id="3_mx8xs"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vuqri")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -506.0
+offset_top = -19.0
+offset_right = 1446.0
+offset_bottom = 659.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color(0.914255, 0.964872, 0.330954, 1)
+layout_mode = 0
+offset_left = 626.0
+offset_top = 38.0
+offset_right = 1470.0
+offset_bottom = 606.0
+text = "TEXUA 2024-2025"
+
+[node name="Label2" type="Label" parent="ColorRect"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.107
+anchor_top = -0.126
+anchor_right = 0.107
+anchor_bottom = -0.126
+offset_left = 426.136
+offset_top = 191.428
+offset_right = 1425.14
+offset_bottom = 214.428
+theme_override_font_sizes/font_size = 40
+text = "BETA"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.914255, 0.964872, 0.330954, 1)
+offset_left = 771.0
+offset_top = 36.0
+offset_right = 1082.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 20
+text = "dev: Kovalchuk M.
+beta tester:Yaraslav L."
+
+[node name="Redeysyeallkron" type="Sprite2D" parent="."]
+position = Vector2(627, 351)
+scale = Vector2(1.34883, 1.53782)
+texture = ExtResource("1_u8a5t")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 0, 1)
+offset_left = 45.0
+offset_top = 416.0
+offset_right = 226.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 24
+text = "<==="
+
+[node name="add" type="Button" parent="."]
+offset_left = 993.0
+offset_top = 465.0
+offset_right = 1129.0
+offset_bottom = 601.0
+icon = ExtResource("3_mx8xs")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="add" to="." method="_on_add_pressed"]

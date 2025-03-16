@@ -1,0 +1,30 @@
+en:dev: Kovalchuk M. , Yaroslav L.
+Return
+Menu
+Save
+Load
+Exit,exit
+Play
+Info
+Setting
+close setting
+Yes 
+No
+How to play?
+Y
+N
+uk:розрбник гри:  Ковальчук Михайло  Тестировщик  Ярслав Лісовский
+Повернутися в гру
+Меню
+Зберегтись
+Загрузити зб.
+Грати 
+Налаштуваня
+Вийти,вийти
+Інфо..
+закрти налшт..
+Так
+Ні
+Як грати?
+Т
+Н

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://i5lyipqmfrpg"]
+
+[ext_resource type="Texture2D" uid="uid://th8kolv6pm62" path="res://mouse/Layer 1_my_mous8.png" id="1_j3sw1"]
+[ext_resource type="Texture2D" uid="uid://cajro3rvyl3k8" path="res://mouse/Layer 1_my_mous1-1.png.png" id="1_nyyy1"]
+[ext_resource type="Texture2D" uid="uid://d12suxc5l2k0d" path="res://mouse/Layer 1_my_mous7-1.png.png" id="2_3vn8n"]
+
+[node name="MoreSeting" type="Node2D"]
+
+[node name="ext" type="Button" parent="."]
+offset_left = 59.0
+offset_top = 531.0
+offset_right = 297.0
+offset_bottom = 625.0
+theme_override_font_sizes/font_size = 50
+text = "<=="
+
+[node name="more" type="Button" parent="."]
+offset_left = -4.0
+offset_top = 11.0
+offset_right = 1155.0
+offset_bottom = 275.0
+icon = ExtResource("1_j3sw1")
+icon_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 80.0
+offset_top = -1017.0
+offset_right = 1133.0
+offset_bottom = -647.0
+
+[node name="cur" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 170.0
+offset_right = 152.0
+offset_bottom = 242.0
+icon = ExtResource("1_nyyy1")
+
+[node name="cur2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 182.0
+offset_right = 418.0
+offset_bottom = 254.0
+icon = ExtResource("2_3vn8n")
+
+[node name="cur0" type="Button" parent="."]
+offset_left = 706.0
+offset_top = -877.0
+offset_right = 1015.0
+offset_bottom = -769.0
+theme_override_font_sizes/font_size = 23
+text = "original cur"

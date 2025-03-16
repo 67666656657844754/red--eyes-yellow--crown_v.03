@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfgk2bkbgks6v"]
+
+[ext_resource type="Texture2D" uid="uid://svrrxvh4fdkr" path="res://image/New Piskel-2.png (1).png" id="1_ioa6g"]
+[ext_resource type="Texture2D" uid="uid://dhteefsu6ifw8" path="res://image/New Piskel-3.png.png" id="2_imdkn"]
+
+[node name="NewPiskel-2_png(1)" type="Sprite2D"]
+position = Vector2(363, 216)
+texture = ExtResource("1_ioa6g")
+
+[node name="NewPiskel-3_png" type="Sprite2D" parent="."]
+position = Vector2(324, -17)
+scale = Vector2(0.294034, 0.306818)
+texture = ExtResource("2_imdkn")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 252.0
+offset_top = -67.0
+offset_right = 350.0
+offset_bottom = 20.0

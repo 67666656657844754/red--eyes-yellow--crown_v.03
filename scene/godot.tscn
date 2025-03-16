@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bglsvw4s8rwrc"]
+
+[ext_resource type="Script" path="res://script/godot.gd" id="1_28jlt"]
+[ext_resource type="Texture2D" uid="uid://sakj8vsa8bhw" path="res://icon.svg" id="2_yspcy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75c6c"]
+size = Vector2(132, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_far7r"]
+size = Vector2(141, 134)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_28jlt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 5)
+texture = ExtResource("2_yspcy")
+
+[node name="Player" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_75c6c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, 4)
+shape = SubResource("RectangleShape2D_far7r")
+
+[node name="etxxx" type="Button" parent="."]
+offset_left = -505.0
+offset_top = -246.0
+offset_right = -371.0
+offset_bottom = -190.0
+text = "exit"
+
+[connection signal="pressed" from="etxxx" to="." method="_on_etxxx_pressed"]

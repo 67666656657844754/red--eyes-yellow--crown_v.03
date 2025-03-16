@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://tcddjgcwnr1k"]
+
+[ext_resource type="Texture2D" uid="uid://cxdef6644ve5m" path="res://image/New Piskel-1.png (1).png" id="1_ringi"]
+[ext_resource type="Script" path="res://script/node_25d.gd" id="1_ye3bg"]
+[ext_resource type="Texture2D" uid="uid://rrgef1dafemb" path="res://image/New Piskel-5.png.png" id="2_o7w6m"]
+[ext_resource type="Texture2D" uid="uid://dhteefsu6ifw8" path="res://image/New Piskel-3.png.png" id="5_b2wnm"]
+[ext_resource type="Texture2D" uid="uid://sakj8vsa8bhw" path="res://icon.svg" id="5_og2hq"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ye3bg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 650.0
+color = Color(0, 1, 1, 1)
+
+[node name="NewPiskel-1_png(1)" type="Sprite2D" parent="."]
+position = Vector2(163.25, 268.75)
+scale = Vector2(0.297585, 0.273437)
+texture = ExtResource("1_ringi")
+
+[node name="NewPiskel-5_png" type="Sprite2D" parent="."]
+position = Vector2(203, 150)
+texture = ExtResource("2_o7w6m")
+
+[node name="my_pc" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.25098)
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 232.0
+offset_bottom = 187.0
+
+[node name="web" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.4)
+offset_left = 78.0
+offset_top = 212.0
+offset_right = 232.0
+offset_bottom = 334.0
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 292.0
+offset_top = 41.0
+offset_right = 428.0
+offset_bottom = 181.0
+icon = ExtResource("5_og2hq")
+
+[node name="NewPiskel-3_png" type="Sprite2D" parent="."]
+position = Vector2(1022, 542)
+scale = Vector2(0.454545, 0.485085)
+texture = ExtResource("5_b2wnm")
+
+[node name="off" type="Button" parent="NewPiskel-3_png"]
+modulate = Color(1, 1, 1, 0.227451)
+offset_left = -266.0
+offset_top = -157.0
+offset_right = 57.0
+offset_bottom = 99.0
+
+[connection signal="pressed" from="my_pc" to="." method="_on_my_pc_pressed"]
+[connection signal="pressed" from="web" to="." method="_on_web_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="NewPiskel-3_png/off" to="." method="_on_off_pressed"]

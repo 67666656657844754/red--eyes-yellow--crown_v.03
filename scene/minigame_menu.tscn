@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bah4vbauqgp"]
+
+[ext_resource type="Script" path="res://script/minigame_menu.gd" id="1_iqypc"]
+[ext_resource type="Texture2D" uid="uid://sakj8vsa8bhw" path="res://icon.svg" id="2_ducm5"]
+
+[node name="minigame_menu" type="Node2D"]
+script = ExtResource("1_iqypc")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(980, 177)
+texture = ExtResource("2_ducm5")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 569.0
+offset_bottom = 695.0
+
+[node name="MINIGAME1" type="Button" parent="."]
+offset_left = 55.0
+offset_top = 81.0
+offset_right = 466.0
+offset_bottom = 257.0
+text = "MINI GAME1"
+
+[node name="MINIGAME2" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 324.0
+offset_right = 474.0
+offset_bottom = 485.0
+text = "MINI GAME 2"
+
+[node name="node2d" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 519.0
+offset_right = 444.0
+offset_bottom = 681.0
+text = "<"
+
+[connection signal="pressed" from="MINIGAME1" to="." method="_on_minigame_1_pressed"]
+[connection signal="pressed" from="MINIGAME2" to="." method="_on_minigame_2_pressed"]
+[connection signal="pressed" from="node2d" to="." method="_on_node_2d_pressed"]

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bxsu37y6cirkb"
+
+[deps]
+
+files=["res://languages/trasleta.en.translation", "res://languages/trasleta.uk.translation"]
+
+source_file="res://languages/trasleta.csv"
+dest_files=["res://languages/trasleta.en.translation", "res://languages/trasleta.uk.translation"]
+
+[params]
+
+compress=true
+delimiter=1

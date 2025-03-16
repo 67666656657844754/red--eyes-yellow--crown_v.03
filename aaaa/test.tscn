@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://bnyigdmw022j6"]
+
+[ext_resource type="Script" path="res://aaaa/test.gd" id="1_8wraj"]
+[ext_resource type="Texture2D" uid="uid://b2ihxuosasxtv" path="res://image/New Piskel (4).png" id="1_wcsww"]
+[ext_resource type="Texture2D" uid="uid://bawkqlwyh5nax" path="res://image/noname.png" id="2_nc0o2"]
+[ext_resource type="Texture2D" uid="uid://b4g5roumyed1u" path="res://image/New Piskel (2).png" id="3_pr8ut"]
+[ext_resource type="Texture2D" uid="uid://ccifi3subim1v" path="res://PLAYER/New Piskel-1.png (1).png" id="4_bv51i"]
+[ext_resource type="PackedScene" uid="uid://dyph7w3korhjd" path="res://PLAYER/sncene_pl/character_body_2d.tscn" id="5_bsnp5"]
+[ext_resource type="Script" path="res://aaaa/object.gd" id="6_1h3ea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1aj2"]
+size = Vector2(1223.5, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5xfn"]
+size = Vector2(376.5, 296.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8wraj")
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="."]
+position = Vector2(678, 451)
+scale = Vector2(3.05859, 3.53516)
+texture = ExtResource("1_wcsww")
+
+[node name="БезІмені" type="Sprite2D" parent="."]
+position = Vector2(330, 179.75)
+scale = Vector2(0.430813, 0.75)
+texture = ExtResource("2_nc0o2")
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="."]
+position = Vector2(1194.5, 541.5)
+scale = Vector2(1.606, 1.322)
+texture = ExtResource("3_pr8ut")
+
+[node name="NewPiskel-1_png(1)" type="Sprite2D" parent="."]
+position = Vector2(673, 471)
+scale = Vector2(1, 1.10547)
+texture = ExtResource("4_bv51i")
+
+[node name="NewPiskel(4)2" type="Sprite2D" parent="."]
+position = Vector2(713, 674)
+texture = ExtResource("1_wcsww")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(612.75, 816)
+shape = SubResource("RectangleShape2D_s1aj2")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_bsnp5")]
+position = Vector2(518, 275)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 130.0
+offset_top = 395.0
+offset_right = 380.0
+offset_bottom = 592.0
+
+[node name="object" type="Area2D" parent="." node_paths=PackedStringArray("butt")]
+collision_layer = 129
+collision_mask = 129
+script = ExtResource("6_1h3ea")
+butt = NodePath("../Button")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="object"]
+position = Vector2(172.25, 589.75)
+shape = SubResource("RectangleShape2D_j5xfn")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 996.0
+offset_top = 142.0
+offset_right = 1186.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 45
+text = "==>"
+
+[connection signal="area_entered" from="object" to="object" method="_on_area_entered"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

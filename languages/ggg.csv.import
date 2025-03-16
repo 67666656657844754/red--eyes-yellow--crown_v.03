@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b5i777mn7a6ip"
+valid=false
+
+[deps]
+
+source_file="res://languages/ggg.csv"
+
+[params]
+
+compress=true
+delimiter=0

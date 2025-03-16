@@ -1,0 +1,160 @@
+[gd_scene load_steps=10 format=4 uid="uid://ni2wa60girpc"]
+
+[ext_resource type="Texture2D" uid="uid://c6ltcx8liqvso" path="res://image/New Piskel (3)/sprite_sprite0.png" id="1_5qi7r"]
+[ext_resource type="Texture2D" uid="uid://blk7knvc3v7r" path="res://image/New Piskel (3)/sprite_sprite1.png" id="2_fwyxy"]
+[ext_resource type="Texture2D" uid="uid://dkcr6mlc8leju" path="res://image/New Piskel (3)/sprite_sprite2.png" id="3_v5g7l"]
+[ext_resource type="Texture2D" uid="uid://ech2detov6l8" path="res://image/New Piskel (3)/sprite_sprite3.png" id="4_kj67m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjbft"]
+texture = ExtResource("1_5qi7r")
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4ffl"]
+texture = ExtResource("2_fwyxy")
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mi07d"]
+texture = ExtResource("3_v5g7l")
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvlsx"]
+texture = ExtResource("4_kj67m")
+0:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_br8x7"]
+sources/1 = SubResource("TileSetAtlasSource_bjbft")
+sources/2 = SubResource("TileSetAtlasSource_q4ffl")
+sources/3 = SubResource("TileSetAtlasSource_mi07d")
+sources/4 = SubResource("TileSetAtlasSource_kvlsx")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_br8x7")
+rendering_quadrant_size = 128
+navigation_visibility_mode = 2
+format = 2
+layer_0/name = "Layer1"
+layer_0/tile_data = PackedInt32Array(-65529, 1, 5)
+
+[node name="Layer0" type="TileMapLayer" parent="TileMap"]
+z_index = 128
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD+/wAAAQAAAAQAAAD//wAAAQAAAAQAAAD+/wEAAQAAAAQAAAADAAIAAQADAAQAAAD//wIAAQAAAAQAAAD+/wIAAQAAAAQAAAD/////AQAAAAQAAAAAAP//AQAAAAQAAAABAP//AQAAAAQAAAD+////AQAAAAQAAAD+/wMAAQAAAAQAAAD//wMAAQAAAAQAAAAAAAMAAQAAAAQAAAABAAMAAQAAAAQAAAADAAMAAQACAAQAAAAEAAMAAQADAAQAAAD//wEAAQABAAQAAAAAAAEAAQACAAQAAAABAAEAAQADAAQAAAACAAEAAQAEAAQAAAADAAEAAQAFAAQAAAAEAAEAAQAGAAQAAAAFAAEAAQAAAAQAAAAGAAEAAQABAAQAAAAHAAEAAQACAAQAAAAIAAEAAQADAAQAAAAJAAEAAQAEAAQAAAAKAAEAAQAFAAQAAAALAAEAAQAGAAQAAAAAAAIAAQAAAAQAAAABAAIAAQABAAQAAAACAAIAAQACAAQAAAAEAAIAAQAEAAQAAAAFAAIAAQAAAAQAAAAGAAIAAQABAAQAAAACAAMAAQABAAQAAAAFAAMAAQAAAAQAAAAGAAMAAQABAAQAAAAHAAMAAQACAAQAAAAHAAIAAQACAAQAAAAIAAIAAQADAAQAAAAJAAIAAQAEAAQAAAAKAAIAAQAFAAQAAAALAAIAAQAGAAQAAAAIAAMAAQADAAQAAAAJAAMAAQAEAAQAAAAKAAMAAQAFAAQAAAALAAMAAQAGAAQAAAAAAAAAAQAAAAQAAAABAAAAAQABAAQAAAACAAAAAQACAAQAAAADAAAAAQADAAQAAAAEAAAAAQAEAAQAAAAFAAAAAQAAAAQAAAAGAAAAAQABAAQAAAAHAAAAAQACAAQAAAAIAAAAAQADAAQAAAAJAAAAAQAEAAQAAAAKAAAAAQAFAAQAAAALAAAAAQAGAAQAAAACAP//AQAAAAQAAAADAP//AQABAAQAAAAEAP//AQACAAQAAAAFAP//AQADAAQAAAAGAP//AQAAAAQAAAAHAP//AQABAAQAAAAIAP//AQACAAQAAAAJAP//AQADAAQAAAAKAP//AQAEAAQAAAALAP//AQAFAAQAAAA=")
+tile_set = SubResource("TileSet_br8x7")
+y_sort_origin = 128
+rendering_quadrant_size = 128
+use_kinematic_bodies = true
